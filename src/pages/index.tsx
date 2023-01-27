@@ -26,11 +26,11 @@ const Home: NextComponentType<AppProps, Props, Props> = ({ data }) => {
   return ( 
     <>
     <Header />
-    {products.length === 0 ? <Skeleton count={8} /> : null}
+    {products.length === 0 ? <Skeleton {...{'data-testid':'skeleton'}} count={8} /> : null}
     <main className={styles.main}>
     {products.map((product ) => {
       return(
-        <div id='product' key={product.id}>
+        <div data-testid='product' key={product.id}>
           <Image src={product.photo} alt={product.name} width={200} height={200} />
           <h1>{product.name}</h1>
           <h2>{product.price}</h2>
