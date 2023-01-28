@@ -1,13 +1,14 @@
 .main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
-  
+  display: grid;
+  place-items: center;
+}
 
-
+.main section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: .5rem;
+  padding-top: 1rem;
 }
 
 .description {

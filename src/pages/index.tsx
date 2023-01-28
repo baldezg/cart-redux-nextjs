@@ -4,13 +4,13 @@ import { AppProps } from 'next/app';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Header from '../components/Header/Header';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import ProductCard from '../components/ProductCard/ProductCard';
 
 type Props = {  
   data: {
     products: {
-      id: number;
+      id: string;
       name: string;
       description: string;
       photo: string;
@@ -19,26 +19,21 @@ type Props = {
   }
 }
 
-
 const Home: NextComponentType<AppProps, Props, Props> = ({ data }) => {
-  console.log(data);
   const products = data.products;
   return ( 
     <>
     <Header />
-    {products.length === 0 ? <Skeleton {...{'data-testid':'skeleton'}} count={8} /> : null}
-    <main className={styles.main}>
-    {products.map((product ) => {
-      return(
-        <div data-testid='product' key={product.id}>
-          <Image src={product.photo} alt={product.name} width={200} height={200} />
-          <h1>{product.name}</h1>
-          <h2>{product.price}</h2>
-          <p>{product.description}</p>
-          <button>Adicionar ao carrinho</button>
-        </div>
-      )
-    })}
+    {products.length === 0 ? <Skeleton count={8} /> : null}
+      
+    <main className={styles.main}>   
+      <section>
+        {products.map((product ) => {
+          return(
+            <ProductCard key={product.id} id={product.id} quantity={1} name={product.name} description={product.description} photo={product.photo} price={product.price} />
+          )
+        })}
+      </section> 
     </main>
     </>
   )
