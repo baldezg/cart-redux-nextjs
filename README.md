@@ -7,7 +7,7 @@
 * Radix-UI
 * ESLint
 
-## Getting Started
+## Instalação do projeto
 Primeiramente certifique-se que tenha o Node.js e algum gerenciador de pacotes como npm ou yarn instalados na sua máquina. 
 
 Tendo o que é preciso vamos a instalação das dependências utilizando como exemplo o npm. Na pasta do projeto rode o seguinte comando:
