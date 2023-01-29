@@ -4,8 +4,9 @@ import { AppProps } from 'next/app';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import Header from '../components/Header/Header';
-import styles from '../styles/Home.module.css';
 import ProductCard from '../components/ProductCard/ProductCard';
+import Footer from '../components/Footer/Footer';
+import * as S from '../styles/styles'
 
 type Props = {  
   data: {
@@ -26,15 +27,16 @@ const Home: NextComponentType<AppProps, Props, Props> = ({ data }) => {
     <Header />
     {products.length === 0 ? <Skeleton count={8} /> : null}
       
-    <main className={styles.main}>   
-      <section>
+    <S.Main>   
+      <S.MainSection>
         {products.map((product ) => {
           return(
             <ProductCard key={product.id} id={product.id} quantity={1} name={product.name} description={product.description} photo={product.photo} price={product.price} />
           )
         })}
-      </section> 
-    </main>
+      </S.MainSection> 
+    </S.Main>
+    <Footer />
     </>
   )
   }

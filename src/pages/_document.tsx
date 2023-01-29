@@ -1,4 +1,3 @@
-// import Analytics from 'components/Analytics'
 import Document, { DocumentContext, DocumentInitialProps, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -37,7 +36,6 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          {/* <Analytics /> */}
         </body>
       </Html>
     )

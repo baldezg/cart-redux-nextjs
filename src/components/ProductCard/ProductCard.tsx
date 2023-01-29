@@ -1,11 +1,8 @@
-//create beautiful cards to e-commerce
 import React from 'react';
-import Image from 'next/image';
-import Button from '../Button/Button';
-import styles from './ProductCard.module.css';
-import shoppingCart from '../../assets/img/shopping-cart.svg';
+import ShoppingBagOpen from '../../assets/img/shopping-bag.svg';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../redux/cart.slice';
+import * as S from './styles'
 
 type Props = {
     name: string;
@@ -17,23 +14,34 @@ type Props = {
     
 }
 
+const hideDescription = (description: string) => {
+    if (description.length > 50) {
+        return description.substring(0, 50) + "...";
+    } else {
+        return description;
+    }
+}
+
+const formatPrice = (price: string) => {
+    const priceNumber = Number(price);
+    priceNumber.toFixed(0);
+    return priceNumber.toString();
+}
+
 const ProductCard = (props : Props) => {
 
     const dispatch = useDispatch();
 
-
-    
-
     return (
-        <div className={styles.card}>
-            <Image alt={props.description} src={props.photo} width={100} height={100} />
-            <div className={styles.card__info}>
-            <h2>{props.name}</h2>
-            <h2 className={styles.card__price}>{props.price}</h2>
-            </div>
-            <p>{props.description}</p>
-            <Button className={styles.card__btn} icon={shoppingCart} text="COMPRAR" onClick={() => dispatch(addToCart(props))}/>
-        </div>
+        <S.Card>
+            <S.StyledImage alt={props.description} src={props.photo} width={200} height={200} />
+            <S.CardInfo>
+            <S.Name>{props.name}</S.Name>
+            <S.Price>R${formatPrice(props.price)}</S.Price>
+            </S.CardInfo>
+            <S.Description>{hideDescription(props.description)}</S.Description>
+            <S.ButtonBuy icon={ShoppingBagOpen} text="COMPRAR" onClick={() => dispatch(addToCart(props))}/>
+        </S.Card>
             
     )
 }
