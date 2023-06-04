@@ -14,6 +14,10 @@ A aplicação consome uma API externa para obter os dados dos produtos a serem e
 
 No geral, o projeto representa um exemplo de aplicação web moderna, construída com tecnologias avançadas para fornecer uma experiência de usuário atraente e funcional em um contexto de e-commerce.
 
+##Link
+
+A aplicação pode ser acessada através do seguinte [link](https://cart-redux-nextjs.vercel.app/).
+
 ## Ferramentas que utilizei
 
 ### NextJS
