@@ -24,13 +24,10 @@ O TypeScript foi utilizado para fornecer tipagem estática ao projeto, aumentand
 O Redux Toolkit foi adotado como a biblioteca de gerenciamento de estado, permitindo que a aplicação armazenasse e atualizasse de forma eficiente o estado global do carrinho de compras. Com o Redux Toolkit, foi possível organizar o fluxo de dados de maneira clara e concisa, simplificando a implementação das funcionalidades relacionadas ao carrinho.
 
 ### Jest
-Para garantir a qualidade do código, foram criados testes automatizados utilizando o Jest, uma estrutura de teste amplamente utilizada no ecossistema React. Esses testes abrangiam desde os componentes individuais até os fluxos de interação da aplicação, garantindo que a aplicação se comportasse corretamente em diferentes cenários e que novas alterações não introduzissem regressões.
+Para garantir a qualidade do código, foram desenvolvidos testes automatizados utilizando a biblioteca de testes Jest. Esses testes abrangem a renderização correta dos componentes individuais.
 
 ### Styled-Components
 A estilização dos componentes foi realizada com o auxílio do Styled-Components, uma biblioteca que permite escrever CSS diretamente no código JavaScript/TypeScript. Com essa abordagem, foi possível criar estilos reutilizáveis e facilmente modificáveis, melhorando a manutenção e a consistência visual da aplicação.
-
-### Radix-UI
-### ESLint
 
 ## Instalação do projeto
 Primeiramente certifique-se que tenha o Node.js e algum gerenciador de pacotes como npm ou yarn instalados na sua máquina. 
