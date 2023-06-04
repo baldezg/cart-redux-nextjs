@@ -166,6 +166,7 @@ padding: 1.5rem;
 & p {
     color: #fff;
     font-weight: 600;
+}
 `; 
 export const Checkout = styled.button`
 background-color: #b388eb;
