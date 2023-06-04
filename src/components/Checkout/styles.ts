@@ -4,7 +4,7 @@ import Image  from  'next/image';
 import Button from '../Button/Button';
 
 export const CheckoutButton = styled(Button)`
-    background-color: #fff;
+    background-color: #f4f4ed;
     border-radius: 4px;
     border: none;
     display: flex;
@@ -23,7 +23,7 @@ top: 0;
 right: 0;
 width: calc(100% / 3);
 height: 100vh;
-background-color: #0F52BA;
+background-color: #f4f4ed;
 animation: slideIn .5s ease-in-out;
 
 
@@ -63,12 +63,12 @@ overflow-y: auto;
 
 `;
 export const Title = styled.h2`
-color: #fff;
+color: #232323;
 margin: 1.5rem;
 ;`
 
 export const Msg = styled.p`
-color: #fff;
+color: #232323;
 margin: 1.5rem;
 text-align: center;`
 
@@ -168,11 +168,11 @@ padding: 1.5rem;
     font-weight: 600;
 `; 
 export const Checkout = styled.button`
-background-color: #000;
+background-color: #b388eb;
 border: none;
 width: 100%;
 padding: 1.5rem;
-color: #fff;
+color: #f4f4ed;
 font-weight: 600;
 font-size: 1.2rem;
 &:hover {

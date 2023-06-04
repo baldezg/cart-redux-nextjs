@@ -7,7 +7,7 @@ import * as S from './styles'
 type Props = {
     name: string;
     description: string;
-    photo: string;
+    image: string;
     price: string;
     quantity: number;
     id: string;
@@ -34,7 +34,7 @@ const ProductCard = (props : Props) => {
 
     return (
         <S.Card>
-            <S.StyledImage alt={props.description} src={props.photo} width={200} height={200} />
+            <S.StyledImage alt={props.description} src={props.image} width={200} height={200} />
             <S.CardInfo>
             <S.Name>{props.name}</S.Name>
             <S.Price>R${formatPrice(props.price)}</S.Price>

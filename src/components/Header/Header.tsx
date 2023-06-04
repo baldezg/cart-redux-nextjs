@@ -1,9 +1,10 @@
 import Checkout from "../Checkout/Checkout";
 import styled from 'styled-components';
-
+import Image from 'next/image';
+import logo from '../../assets/img/logo.svg'
 const StyledHeader = styled.header`
     align-items: center;
-    background-color: #0F52BA;
+    background-color: #b388eb;
     color: #fff;
     display: flex;
     height: 6.5rem;
@@ -14,25 +15,11 @@ const StyledHeader = styled.header`
     }
 `;
 
-const Title = styled.h1`
-    font-size: 2rem;
-    font-weight: bold;
-    span {	
-        font-size: 1rem;
-        font-weight: normal;
-        margin-left: .5rem;
-    }
-    @media (max-width: 768px) {
-        font-size: 1.5rem;
-        span {
-            font-size: .8rem;
-        }
-    }
-`;
+
 function Header() {    
     return (
         <StyledHeader data-testid="header">
-            <Title>MKS<span>Sistemas</span></Title>
+            <Image alt="logo" width={200} height={100} src={logo}/>
             <Checkout />
         </StyledHeader>
     );

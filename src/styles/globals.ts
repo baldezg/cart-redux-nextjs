@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fff;
+    background-color: #f4f4ed;
   }
   li {
     list-style: none;

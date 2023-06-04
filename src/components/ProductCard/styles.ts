@@ -48,7 +48,7 @@ export const Description = styled.p`
     padding: 0 .5rem;
 `;
 export const ButtonBuy = styled(Button)`
-    background-color: #0F52BA;
+    background-color: #B670D4;
     border-radius: 0 0 8px 8px;
     border: none;
     color: #fff;

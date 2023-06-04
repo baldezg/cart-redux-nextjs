@@ -14,7 +14,7 @@ export default function Checkout() {
                 name: string;
                 price: number;
                 quantity: number;
-                photo: string;
+                image: string;
             }[];
         };
     };
@@ -52,7 +52,7 @@ export default function Checkout() {
                                 {cart.items.map((item) => (
                                     <li key={item.id}>
                                         <S.Item>
-                                            <S.ItemImage src={item.photo} width={50} height={50} alt={item.name} />
+                                            <S.ItemImage src={item.image} width={50} height={50} alt={item.name} />
                                             <S.ItemName>{item.name}</S.ItemName>
                                             <S.ItemQuantity>
                                                 <span>
