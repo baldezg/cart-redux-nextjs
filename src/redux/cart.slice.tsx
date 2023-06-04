@@ -5,7 +5,7 @@ interface Item {
   name: string;
   price: string;
   quantity: number;
-  photo: string;
+  image: string;
 }
 
 interface CartState {
