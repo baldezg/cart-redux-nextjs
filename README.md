@@ -49,7 +49,6 @@ npm run test
 ```
 
 
-## Deploy
-O a aplicação também pode ser visualizada através deste [link](https://mks-nine.vercel.app/)
+
 
 
